@@ -6,4 +6,4 @@
   tasks:
 
   - debug:
-     msg: "{{ansible_distribution}} {{ansible_distribution_version}}"
+     msg: "{{ansible_distribution}} {{ansible_distribution_version}}. Time:{{ansible_date_time.time}}{{ansible_date_time.tz_offset}}"
