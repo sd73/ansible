@@ -1,17 +1,17 @@
 [core_servers]
-dc             ansible_host=10.0.20.2 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
-pdc3           ansible_host=10.0.20.13 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
-it-web         ansible_host=10.0.20.4 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
-rsyslog        ansible_host=10.0.20.32 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
-buh-srv        ansible_host=10.0.20.182 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
+dc-ocean2-root ansible_host=10.0.20.2 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
+pdc3-root      ansible_host=10.0.20.13 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
+itweb-root     ansible_host=10.0.20.4 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
+rsyslog-root   ansible_host=10.0.20.32 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
+buh-srv-root   ansible_host=10.0.20.182 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
 
 #[esxi_servers]
 #esxi1  ansible_host=10.0.20.5 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
 
 [proxmox_servers]
-pve1  ansible_host=10.0.20.9  ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
-pve2  ansible_host=10.0.20.10 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
-pve3  ansible_host=10.0.20.11 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
+pve1-root  ansible_host=10.0.20.9  ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
+pve2-root  ansible_host=10.0.20.10 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
+pve3-root  ansible_host=10.0.20.11 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
 
 #[mikrotik]
 #miktotik-gw    ansible_host=10.0.20.1 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
@@ -41,9 +41,9 @@ pve3  ansible_host=10.0.20.11 ansible_user=root ansible_ssh_private_key_file=/ho
 #google-drv   ansible_host=10.0.20.34 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
 
 [demidov_servers]
-demidov-srv     ansible_host=10.0.20.22 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
-demidov-pc      ansible_host=10.0.20.31 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
-demidov-ansible ansible_host=10.0.20.35 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
+demidov-srv-root     ansible_host=10.0.20.22 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
+demidov-pc-root      ansible_host=10.0.20.31 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
+demidov-ansible-root ansible_host=10.0.20.35 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
 
 #[baro_servers]
 #10.0.20.28 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
