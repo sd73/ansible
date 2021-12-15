@@ -10,3 +10,12 @@
 
   - name: Upgrade all packages on servers
     apt: upgrade=dist force_apt_get=yes
+
+  - name: Check if a reboot is needed for servers
+    register: reboot_required_file
+    stat: path=/var/run/reboot-required get_md5=no
+
+  - name: Message need reebot
+    debug:
+     msg: "Reboot need after Ansible apt ugrades kernel"
+    when: reboot_required_file.stat.exists
