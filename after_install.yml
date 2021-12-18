@@ -1,7 +1,7 @@
 ---
 - name: After Install first steps
   become: yes
-  hosts: all
+  hosts: debianos
 
   tasks:
   - name: Update apt-get repo and cache

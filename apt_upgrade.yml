@@ -1,7 +1,7 @@
 ---
 - name: Update and upgrade apt packages
   become: yes
-  hosts: all
+  hosts: debianos
 
   tasks:
 
