@@ -17,11 +17,11 @@ demidov-ansible-root ansible_host=10.0.20.35
 
 [mikrotik]
 miktotik-gw      ansible_host=10.0.20.1
-# mikrotik-brg   ansible_host=10.0.20.3
-# mikrotik-admin ansible_host=10.0.20.6
+mikrotik-brg     ansible_host=10.0.20.3
+mikrotik-admin   ansible_host=10.0.20.6
 #                ansible_host=10.0.20.20
-#                ansible_host=10.0.20.41
-#                ansible_host=10.0.20.42
+mikrotik-lab     ansible_host=10.0.20.41
+mikrotik-lab2    ansible_host=10.0.20.42
 
 [esxi_servers]
 # esxi1  ansible_host=10.0.20.5 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
