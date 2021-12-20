@@ -1,0 +1,335 @@
+
+PLAY [Getting data from routers] *******************************************************************************************************************************
+
+TASK [system command] ******************************************************************************************************************************************
+ok: [miktotik-gw]
+ok: [mikrotik-admin]
+ok: [mikrotik-lab2]
+ok: [mikrotik-lab]
+ok: [mikrotik-brg]
+
+TASK [Gather system resources] *********************************************************************************************************************************
+changed: [miktotik-gw]
+changed: [mikrotik-lab]
+changed: [mikrotik-admin]
+changed: [mikrotik-lab2]
+changed: [mikrotik-brg]
+
+TASK [Show routerboard] ****************************************************************************************************************************************
+ok: [miktotik-gw] => {
+    "system_print.stdout_lines": [
+        [
+            "/",
+            "       routerboard: yes",
+            "             model: CCR1009-7G-1C-1S+",
+            "     serial-number: E3200DD11527",
+            "     firmware-type: tilegx",
+            "  factory-firmware: 6.45.9",
+            "  current-firmware: 6.49.1",
+            "  upgrade-firmware: 6.49.1"
+        ]
+    ]
+}
+ok: [mikrotik-brg] => {
+    "system_print.stdout_lines": [
+        [
+            "/",
+            "       routerboard: yes",
+            "             model: CRS125-24G-1S",
+            "     serial-number: 73800604BB78",
+            "     firmware-type: ar9344",
+            "  factory-firmware: 3.33",
+            "  current-firmware: 6.48.4",
+            "  upgrade-firmware: 6.49.1"
+        ]
+    ]
+}
+ok: [mikrotik-admin] => {
+    "system_print.stdout_lines": [
+        [
+            "/",
+            "       routerboard: yes",
+            "             model: 2011UiAS",
+            "     serial-number: 7DD508241716",
+            "     firmware-type: ar9344",
+            "  factory-firmware: 3.41",
+            "  current-firmware: 6.48.3",
+            "  upgrade-firmware: 6.49.1"
+        ]
+    ]
+}
+ok: [mikrotik-lab] => {
+    "system_print.stdout_lines": [
+        [
+            "/",
+            "       routerboard: yes",
+            "             model: CRS125-24G-1S",
+            "     serial-number: 624405565074",
+            "     firmware-type: ar9344",
+            "  factory-firmware: 3.22",
+            "  current-firmware: 6.49.1",
+            "  upgrade-firmware: 6.49.1"
+        ]
+    ]
+}
+ok: [mikrotik-lab2] => {
+    "system_print.stdout_lines": [
+        [
+            "/",
+            "       routerboard: yes",
+            "             model: CRS125-24G-1S",
+            "     serial-number: 945008122EB3",
+            "     firmware-type: ar9344",
+            "  factory-firmware: 6.43",
+            "  current-firmware: 6.49.1",
+            "  upgrade-firmware: 6.49.1"
+        ]
+    ]
+}
+
+TASK [Show system resources] ***********************************************************************************************************************************
+ok: [miktotik-gw] => {
+    "system_resource_print.stdout_lines": [
+        [
+            "/",
+            "             uptime: 3w5d6h33m33s",
+            "            version: 6.49.1 (stable)",
+            "         build-time: Nov/17/2021 10:06:00",
+            "   factory-software: 6.44beta41",
+            "        free-memory: 1720.7MiB",
+            "       total-memory: 1984.0MiB",
+            "                cpu: tilegx",
+            "          cpu-count: 9",
+            "      cpu-frequency: 1200MHz",
+            "           cpu-load: 4%",
+            "     free-hdd-space: 77.7MiB",
+            "    total-hdd-space: 128.0MiB",
+            "  architecture-name: tile",
+            "         board-name: CCR1009-7G-1C-1S+",
+            "           platform: MikroTik"
+        ]
+    ]
+}
+ok: [mikrotik-brg] => {
+    "system_resource_print.stdout_lines": [
+        [
+            "/",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "                   uptime: 3w6d17h17m45s",
+            "                  version: 6.49.1 (stable)",
+            "               build-time: Nov/17/2021 10:06:00",
+            "         factory-software: 6.35.4",
+            "              free-memory: 97.9MiB",
+            "             total-memory: 128.0MiB",
+            "                      cpu: MIPS 74Kc V4.12",
+            "                cpu-count: 1",
+            "            cpu-frequency: 600MHz",
+            "                 cpu-load: 4%",
+            "           free-hdd-space: 107.5MiB",
+            "          total-hdd-space: 128.0MiB",
+            "  write-sect-since-reboot: 98373",
+            "         write-sect-total: 1502297",
+            "               bad-blocks: 0%",
+            "        architecture-name: mipsbe",
+            "               board-name: CRS125-24G-1S",
+            "                 platform: MikroTik"
+        ]
+    ]
+}
+ok: [mikrotik-admin] => {
+    "system_resource_print.stdout_lines": [
+        [
+            "/",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "                   uptime: 3w6d17h18m32s",
+            "                  version: 6.49.1 (stable)",
+            "               build-time: Nov/17/2021 10:06:00",
+            "         factory-software: 6.23",
+            "              free-memory: 103.5MiB",
+            "             total-memory: 128.0MiB",
+            "                      cpu: MIPS 74Kc V4.12",
+            "                cpu-count: 1",
+            "            cpu-frequency: 600MHz",
+            "                 cpu-load: 3%",
+            "           free-hdd-space: 109.7MiB",
+            "          total-hdd-space: 128.0MiB",
+            "  write-sect-since-reboot: 5381",
+            "         write-sect-total: 38978",
+            "               bad-blocks: 0%",
+            "        architecture-name: mipsbe",
+            "               board-name: RB2011UiAS",
+            "                 platform: MikroTik"
+        ]
+    ]
+}
+ok: [mikrotik-lab] => {
+    "system_resource_print.stdout_lines": [
+        [
+            "/",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "                   uptime: 3w5d19h8m33s",
+            "                  version: 6.49.1 (stable)",
+            "               build-time: Nov/17/2021 10:06:00",
+            "              free-memory: 99.1MiB",
+            "             total-memory: 128.0MiB",
+            "                      cpu: MIPS 74Kc V4.12",
+            "                cpu-count: 1",
+            "            cpu-frequency: 600MHz",
+            "                 cpu-load: 9%",
+            "           free-hdd-space: 108.3MiB",
+            "          total-hdd-space: 128.0MiB",
+            "  write-sect-since-reboot: 14517",
+            "         write-sect-total: 98733",
+            "               bad-blocks: 0%",
+            "        architecture-name: mipsbe",
+            "               board-name: CRS125-24G-1S",
+            "                 platform: MikroTik"
+        ]
+    ]
+}
+ok: [mikrotik-lab2] => {
+    "system_resource_print.stdout_lines": [
+        [
+            "/",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "                   uptime: 3w5d19h3m39s",
+            "                  version: 6.49.1 (stable)",
+            "               build-time: Nov/17/2021 10:06:00",
+            "         factory-software: 6.39",
+            "              free-memory: 101.0MiB",
+            "             total-memory: 128.0MiB",
+            "                      cpu: MIPS 74Kc V4.12",
+            "                cpu-count: 1",
+            "            cpu-frequency: 600MHz",
+            "                 cpu-load: 5%",
+            "           free-hdd-space: 109.2MiB",
+            "          total-hdd-space: 128.0MiB",
+            "  write-sect-since-reboot: 9479",
+            "         write-sect-total: 258541",
+            "               bad-blocks: 0%",
+            "        architecture-name: mipsbe",
+            "               board-name: CRS125-24G-1S",
+            "                 platform: MikroTik"
+        ]
+    ]
+}
+
+TASK [Gather facts] ********************************************************************************************************************************************
+ok: [miktotik-gw]
+ok: [mikrotik-admin]
+ok: [mikrotik-lab2]
+ok: [mikrotik-lab]
+ok: [mikrotik-brg]
+
+TASK [Show a fact] *********************************************************************************************************************************************
+ok: [miktotik-gw] => {
+    "msg": "First IP address: 62.205.181.186"
+}
+ok: [mikrotik-brg] => {
+    "msg": "First IP address: 10.0.20.3"
+}
+ok: [mikrotik-admin] => {
+    "msg": "First IP address: 10.0.20.6"
+}
+ok: [mikrotik-lab] => {
+    "msg": "First IP address: 10.0.20.41"
+}
+ok: [mikrotik-lab2] => {
+    "msg": "First IP address: 10.0.20.42"
+}
+
+PLAY RECAP *****************************************************************************************************************************************************
+mikrotik-admin             : ok=6    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+mikrotik-brg               : ok=6    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+mikrotik-lab               : ok=6    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+mikrotik-lab2              : ok=6    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+miktotik-gw                : ok=6    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
