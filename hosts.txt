@@ -5,13 +5,15 @@ itweb-root     ansible_host=10.0.20.4
 rsyslog-root   ansible_host=10.0.20.32
 buh-srv-root   ansible_host=10.0.20.182
 
-# [esxi_servers]
-# esxi1  ansible_host=10.0.20.5 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
-
 [proxmox_servers]
 pve1-root  ansible_host=10.0.20.9
 pve2-root  ansible_host=10.0.20.10
 pve3-root  ansible_host=10.0.20.11
+
+[demidov_servers]
+demidov-srv-root     ansible_host=10.0.20.22
+demidov-pc-root      ansible_host=10.0.20.31
+demidov-ansible-root ansible_host=10.0.20.35
 
 [mikrotik]
 miktotik-gw      ansible_host=10.0.20.1
@@ -21,7 +23,10 @@ miktotik-gw      ansible_host=10.0.20.1
 #                ansible_host=10.0.20.41
 #                ansible_host=10.0.20.42
 
-# [unifi]
+[esxi_servers]
+# esxi1  ansible_host=10.0.20.5 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
+
+[unifi]
 # unifi-buh     ansible_host=10.0.20.50 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
 # unifi-boss3f  ansible_host=10.0.20.51 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
 # unifi-urist   ansible_host=10.0.20.52 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
@@ -30,30 +35,28 @@ miktotik-gw      ansible_host=10.0.20.1
 # unifi-buh2f   ansible_host=10.0.20.55 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
 # unifi-resep   ansible_host=10.0.20.56 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
 
-# [nas_servers]
+[nas_servers]
 # neuronas1     ansible_host=10.0.20.7 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
 # neuronas2     ansible_host=10.0.20.8 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
 # backup-srv    ansible_host=10.0.20.14 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
 
-# [win_ws]
+[win_ws]
 # consultatnt  ansible_host=10.0.20.12 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
 # it-ws        ansible_host=10.0.20.33 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
 # google-drv   ansible_host=10.0.20.34 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
+[win_srv]
+# dc-ocean            10.0.20.240
 
-[demidov_servers]
-demidov-srv-root     ansible_host=10.0.20.22
-demidov-pc-root      ansible_host=10.0.20.31
-demidov-ansible-root ansible_host=10.0.20.35
 
-# [baro_servers]
+[baro_servers]
 # 10.0.20.28 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
 # 10.0.20.29 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
 # 10.0.20.39 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
 
-# [time_servers]
+[time_servers]
 # 10.0.20.40 ansible_user=root ansible_ssh_private_key_file=/home/demidov/.ssh/ansible
 
-# [tabletpc]
+[tabletpc]
 # asus308 ansible_host=10.0.20.195
 # asus311 ansible_host=10.0.20.196
 # lenovo1 ansible_host=10.0.20.197
@@ -67,7 +70,7 @@ demidov-ansible-root ansible_host=10.0.20.35
 # lenovo6 ansible_host=10.0.20.205
 # ausu312 ansible_host=10.0.20.206
 
-# [ipphone]
+[ipphone]
 # 10.0.20.212
 # 10.0.20.213
 # 10.0.20.214
@@ -76,7 +79,7 @@ demidov-ansible-root ansible_host=10.0.20.35
 # 10.0.20.217
 # 10.0.20.229
 
-# [printers]
+[printers]
 # KYOCERA-B-3F        10.0.20.230
 # KYOCERA-B-BUH       10.0.20.231
 # KYOCERA-B-URIST     10.0.20.232
@@ -86,10 +89,15 @@ demidov-ansible-root ansible_host=10.0.20.35
 # KM80CFD1            10.0.20.236
 # KYOCERA-B-NC        10.0.20.237
 
-# [win_srv]
-# dc-ocean            10.0.20.240
-
 # [ipcameras]
 # recorder           10.0.20.243
 # hd1                10.0.20.244
 # hd2                10.0.20.245
+
+[vds]
+# moslab-itadmin            ansible_host=84.201.186.22
+
+[demidov_home_servers]
+demidov-home-pve-root      ansible_host=192.168.0.2
+demidov-home-srv-root      ansible_host=192.168.0.5
+demidov-home-zabbix-root   ansible_host=192.168.0.251

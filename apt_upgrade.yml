@@ -1,7 +1,7 @@
 ---
 - name: Update and upgrade apt packages
   become: yes
-  hosts: debianos
+  hosts: core_servers proxmox_servers demidov_servers
 
   tasks:
 
