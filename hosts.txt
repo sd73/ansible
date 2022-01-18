@@ -14,7 +14,6 @@ pve3-root  ansible_host=10.0.20.11
 [demidov_servers]
 demidov-srv-root     ansible_host=10.0.20.22
 demidov-pc-root      ansible_host=10.0.20.31
-demidov-ansible-root ansible_host=10.0.20.35
 
 [mikrotik]
 miktotik-gw      ansible_host=10.0.20.1
